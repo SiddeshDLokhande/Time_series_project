@@ -103,7 +103,7 @@ try:
     return_df = pd.DataFrame()
     return_value = []
     for stock, value in beta.items():
-        return_value.append(str(round(rf+(value*(rm-rf)), 2)))
+        return_value.append(f"{round((rf + (value * (rm - rf)))*100, 2)}%")
 
 
     return_df["Stock"] = stock_list
